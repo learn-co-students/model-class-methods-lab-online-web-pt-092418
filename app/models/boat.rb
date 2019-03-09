@@ -42,6 +42,8 @@ class Boat < ActiveRecord::Base
 #binding.pry
    end
 
-   
+   def self.longest
+     Boat.order(length: :DESC).first
+   end
 
 end #end of class
